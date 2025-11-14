@@ -283,6 +283,7 @@
             transform: translateX(-50%);
             color: var(--text-light);
             font-size: 1.2rem;
+            display: none;
         }
 
         /* Section Styling */
@@ -471,26 +472,25 @@
             font-size: 0.95rem;
             text-decoration: none;
             transition: all 0.3s ease;
+            color: white;
         }
 
         .badge:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            color: white;
         }
 
         .badge-blue {
             background: var(--accent-blue);
-            color: white;
         }
 
         .badge-red {
             background: #c41200;
-            color: white;
         }
 
         .badge-green {
             background: #16a34a;
-            color: white;
         }
 
         .contact-form {
@@ -838,10 +838,8 @@
             currentImageIndex = index;
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
-            const counter = document.getElementById('lightbox-counter');
             
             lightboxImg.src = galleryImages[currentImageIndex];
-            counter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
@@ -864,10 +862,7 @@
             }
             
             const lightboxImg = document.getElementById('lightbox-img');
-            const counter = document.getElementById('lightbox-counter');
-            
             lightboxImg.src = galleryImages[currentImageIndex];
-            counter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
         }
 
         // Keyboard navigation for lightbox
