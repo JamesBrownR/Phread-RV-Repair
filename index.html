@@ -493,6 +493,68 @@
         </div>
     </section>
 
+    
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Phread RV Repair</h2>
+            <div class="about-content">
+                <p>With 8 years of experience in RV repair and maintenance, Phread RV Repair is your trusted partner for all your recreational vehicle needs in Oklahoma City. Owner Fred and his team provide professional, reliable service for RVs, travel trailers, and 5th wheel campers.</p>
+                <p style="margin-top: 20px;">We understand that your RV represents freedom and adventure. That's why we're committed to keeping you on the road with quality repairs and honest service. Available 24/7 for emergencies, we're here when you need us most.</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Our Work</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1rem; margin-bottom: 50px;">See the quality craftsmanship and attention to detail in every project</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img src="Phread-RV-Repair1.png" alt="RV Repair Work 1" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <span>Click to View</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="Phread-RV-Repair2.png" alt="RV Repair Work 2" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <span>Click to View</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="Phread-RV-Repair3.png" alt="RV Repair Work 3" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <span>Click to View</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="Phread-RV-Repair4.png" alt="RV Repair Work 4" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <span>Click to View</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="Phread-RV-Repair5.png" alt="RV Repair Work 5" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <span>Click to View</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev" onclick="event.stopPropagation(); changeImage(-1)">&#10094;</span>
+        <span class="lightbox-next" onclick="event.stopPropagation(); changeImage(1)">&#10095;</span>
+        <img id="lightbox-img" src="" alt="Gallery Image">
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
     <!-- Services Section -->
     <section id="services">
         <div class="container">
@@ -521,42 +583,6 @@
                 <div class="service-card">
                     <h3>RV Inspections</h3>
                     <p>Comprehensive inspections for peace of mind before your next adventure or when purchasing a used RV.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Phread RV Repair</h2>
-            <div class="about-content">
-                <p>With 8 years of experience in RV repair and maintenance, Phread RV Repair is your trusted partner for all your recreational vehicle needs in Oklahoma City. Owner Fred and his team provide professional, reliable service for RVs, travel trailers, and 5th wheel campers.</p>
-                <p style="margin-top: 20px;">We understand that your RV represents freedom and adventure. That's why we're committed to keeping you on the road with quality repairs and honest service. Available 24/7 for emergencies, we're here when you need us most.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <div class="container">
-            <h2>Our Work</h2>
-            <p style="text-align: center; color: var(--text-gray); font-size: 1.1rem; margin-bottom: 40px;">Quality repairs and craftsmanship you can trust</p>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="Phread-RV-Repair1.png" alt="RV Repair Work" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="Phread-RV-Repair2.png" alt="RV Service" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="Phread-RV-Repair3.png" alt="RV Maintenance" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="Phread-RV-Repair4.png" alt="RV Repair Service" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="Phread-RV-Repair5.png" alt="Professional RV Work" loading="lazy">
                 </div>
             </div>
         </div>
