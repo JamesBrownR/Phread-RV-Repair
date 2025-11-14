@@ -285,43 +285,6 @@
             font-size: 1.2rem;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            section {
-                padding: 50px 20px;
-            }
-
-            section h2 {
-                font-size: 2rem;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .lightbox-prev,
-            .lightbox-next {
-                font-size: 2rem;
-                padding: 10px;
-            }
-        }
-
         /* Section Styling */
         section {
             padding: 80px 20px;
@@ -468,16 +431,66 @@
             font-size: 1.5rem;
         }
 
-        .contact-info p, .contact-info a {
+        .contact-info-block {
+            margin-bottom: 30px;
+        }
+
+        .contact-info-block p {
             color: var(--text-gray);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-size: 1.05rem;
+        }
+
+        .contact-info-block strong {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: var(--accent-blue);
             text-decoration: none;
-            display: block;
+            transition: color 0.3s ease;
         }
 
         .contact-info a:hover {
-            color: var(--accent-blue);
+            color: var(--text-light);
+        }
+
+        .phone-link {
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .badge-blue {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+        .badge-red {
+            background: #c41200;
+            color: white;
+        }
+
+        .badge-green {
+            background: #16a34a;
+            color: white;
         }
 
         .contact-form {
@@ -536,27 +549,6 @@
             background-color: #1e3a5f;
         }
 
-        /* Square Payment Section */
-        .square-payment {
-            text-align: center;
-            margin-top: 50px;
-            padding: 40px;
-            background-color: var(--primary-dark);
-            border: 2px solid var(--accent-blue);
-        }
-
-        .square-payment h3 {
-            color: var(--accent-blue);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-
-        .square-payment p {
-            color: var(--text-gray);
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-
         /* Footer */
         footer {
             background-color: var(--primary-dark);
@@ -569,8 +561,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            
-            margin-top: 20px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
@@ -616,6 +607,16 @@
             section h2 {
                 font-size: 2rem;
             }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lightbox-prev,
+            .lightbox-next {
+                font-size: 2rem;
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -628,10 +629,8 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <!-- Try to load logo, fallback to colored box if not found -->
         <img src="Phread-RV-Repair.png" alt="Phread RV Repair" class="hero-logo" onerror="this.style.display='none'; document.querySelector('.hero-logo-fallback').style.display='flex';">
-        <div class="hero-logo-fallback" style="display: none;">
-        </div>
+        <div class="hero-logo-fallback" style="display: none;"></div>
         
         <p class="hero-subtitle">Professional RV, Trailer & 5th Wheel Service | Oklahoma City</p>
         
@@ -644,8 +643,6 @@
             ↓ Scroll to Learn More
         </div>
     </section>
-
-    
 
     <!-- About Section -->
     <section id="about">
@@ -757,38 +754,35 @@
             <h2>Contact Us</h2>
             <div class="contact-grid">
                 <div class="contact-info">
-                  
-    <h3>Get In Touch</h3>
-    
-    <div style="margin-bottom: 30px;">
-        <p><strong>📞 Phone:</strong></p>
-        <a href="tel:4054299795" style="font-size: 1.3rem; font-weight: 600;">(405) 429-9795</a>
-        <p style="color: #ffc107; font-size: 0.95rem; margin-top: 5px;">Available 24/7 for Emergencies</p>
-    </div>
-    
-    <div style="margin-bottom: 30px;">
-        <p><strong>📍 Location:</strong></p>
-        <p>12115 N I-35 Service Rd<br>Oklahoma City, OK 73131</p>
-        <a href="https://www.yelp.com/map/phread-oklahoma-city" target="_blank" 
-           style="display: inline-block; margin-top: 10px; padding: 8px 20px; background: var(--accent-blue); color: white; border-radius: 4px; font-size: 0.95rem;">
-            📍 Get Directions
-        </a>
-    </div>
-    
-    <div style="margin-bottom: 30px;">
-        <p><strong>🕒 Hours:</strong></p>
-        <p style="font-size: 1.1rem; color: #4ade80;">Open 24 Hours</p>
-        <p>7 Days a Week</p>
-    </div>
-    
-    <div>
-        <p><strong>⭐ Reviews:</strong></p>
-        <a href="https://www.yelp.com/biz/phread-oklahoma-city" target="_blank"
-           style="display: inline-block; margin-top: 10px; padding: 8px 20px; background: #c41200; color: white; border-radius: 4px; font-size: 0.95rem;">
-            Read Our Yelp Reviews
-        </a>
-    </div>
-</div>
+                    <h3>Get In Touch</h3>
+                    
+                    <div class="contact-info-block">
+                        <p><strong>📞 Phone</strong></p>
+                        <a href="tel:4054299795" class="phone-link">(405) 429-9795</a>
+                        <p style="color: #ffc107; font-size: 0.95rem;">Available 24/7 for Emergencies</p>
+                    </div>
+                    
+                    <div class="contact-info-block">
+                        <p><strong>📍 Location</strong></p>
+                        <p>12115 N I-35 Service Rd<br>Oklahoma City, OK 73131</p>
+                        <a href="https://www.yelp.com/map/phread-oklahoma-city" target="_blank" class="badge badge-blue">
+                            📍 Get Directions
+                        </a>
+                    </div>
+                    
+                    <div class="contact-info-block">
+                        <p><strong>🕒 Hours</strong></p>
+                        <p style="font-size: 1.1rem; color: #4ade80;">Open 24 Hours</p>
+                        <p>7 Days a Week</p>
+                    </div>
+                    
+                    <div class="contact-info-block">
+                        <p><strong>⭐ Reviews</strong></p>
+                        <a href="https://www.yelp.com/biz/phread-oklahoma-city" target="_blank" class="badge badge-red">
+                            Read Our Yelp Reviews
+                        </a>
+                    </div>
+                </div>
                 
                 <div class="contact-form">
                     <h3>Request a Quote</h3>
@@ -813,8 +807,8 @@
                     </form>
                 </div>
             </div>
-
-           
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -828,10 +822,72 @@
     </footer>
 
     <script>
-        // Reviews Data - Easy to add more reviews to this array
+        // Gallery images array
+        const galleryImages = [
+            'Phread-RV-Repair1.png',
+            'Phread-RV-Repair2.png',
+            'Phread-RV-Repair3.png',
+            'Phread-RV-Repair4.png',
+            'Phread-RV-Repair5.png'
+        ];
+        
+        let currentImageIndex = 0;
+
+        // Open lightbox
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const counter = document.getElementById('lightbox-counter');
+            
+            lightboxImg.src = galleryImages[currentImageIndex];
+            counter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Change image in lightbox
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            
+            if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            } else if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            }
+            
+            const lightboxImg = document.getElementById('lightbox-img');
+            const counter = document.getElementById('lightbox-counter');
+            
+            lightboxImg.src = galleryImages[currentImageIndex];
+            counter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    changeImage(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changeImage(1);
+                }
+            }
+        });
+
+        // Reviews Data
         const reviews = [
             { name: "Josh H.", rating: 5, body: "Just moved my trailer into the area and had previously had multiple mobile RV repair companies out to address an issue with the A/C unit. Fred was able to find out what was wrong, got the parts ordered, and had me up and running in no time. He's been out multiple times since and I'm sure if I run into anything else, I know who I'm calling. There doesn't seem to be much that he isn't knowledgeable on when it comes to these sorts of things. Didn't break the bank, either." },
-               { name: "Darrin O.", rating: 5, body: "Service was impeccable. Thoroughly inspected out travel trailer. Quickly identified and fixed several hidden problems. Highly recommend!" },
+            { name: "Darrin O.", rating: 5, body: "Service was impeccable. Thoroughly inspected out travel trailer. Quickly identified and fixed several hidden problems. Highly recommend!" },
         ];
 
         let reviewsShown = 0;
@@ -890,8 +946,6 @@
                 message: document.getElementById('message').value
             };
             
-            // You can integrate with your email service here
-            // For now, we'll just show an alert
             alert('Thank you for your message! We will contact you soon.');
             this.reset();
         });
